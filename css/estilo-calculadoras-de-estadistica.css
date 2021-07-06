@@ -1,0 +1,48 @@
+.section-calculadoras-de-estadistica{
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+}
+
+.section-calculadoras-de-estadistica h2{
+    color: black;
+    font-family: 'Noto-regular';
+    padding-top: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-calculadoras-de-estadistica p{
+    color: black;
+    font-family: 'Nunito';
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.section-calculadoras-de-estadistica .grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 80%;
+    background-color: crimson;
+    margin: auto;
+}
+
+.grid div{
+    background-color: #25A086;
+}
+
+.grid a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito';
+    font-size: 18px;
+    padding: 20px 0px;
+}
+
+.grid a:hover{
+    background-color: #196756;
+}

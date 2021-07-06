@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Un Ingeniero Novato">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo-index.css">
+    <link rel="stylesheet" href="../css/estilo-calculadora-modelo-exponencial.css">
+    <link rel="icon" href="../imgs/logo-4.ico">
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"> 
+
+    <!-- ****************************************************** -->
+    <!-- Katex_Math -->
+    <script src="../js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <!-- ****************************************************** -->
+
+    <title>Calculadora modelo exponencial | Un Ingeniero Novato</title>
+</head>
+<body onload="agregarComparadoresKatex()">
+    <!-- Nav -->
+    <div class="nav">
+        <h1><a href="../index.html">UN INGENIERO NOVATO</a></h1><button class="boton-responsive" onclick="toggleBoton()">
+            <i class="fa fa-bars"></i>
+        </button><ul>
+            <li><a href="#">Calculadoras de Física</a></li>
+            <li><a href="calculadoras-de-estadistica.html">Calculadoras de Estadística</a></li>
+            <li><a href="#">Calculadoras de Matemáticas Discretas</a></li>
+            <li><a href="#">Calculadoras de Cálculo</a></li>
+            <li><a href="#">Calculadoras de Química</a></li>
+        </ul>
+    </div>
+
+    <!-- Section -->
+    <div class="section-calculadora-modelo-exponencial">
+        <h2>Calculadora modelo exponencial</h2><br>
+        <p>
+            El modelo exponencial, es una distribución de probabilidad de una variable aleatoria continua. El tiempo que transcurre 
+            hasta que se produzca determinado evento, es una <b>variable aleatoria continua</b> de
+            distribución exponencial.
+        </p><br>
+
+        <p>
+            Para concer más puedes acerca de esta temática puedes ingresar al blog de <a href="https://elingenieronovato.blogspot.com/" style="text-decoration: none;color: black;font-weight: bold;" target="_blank">Un Ingeniero Novato</a> y 
+            consultar en las diferentes entradas.
+            
+        </p><br><br>
+
+        <!-- Inicio del contenedor general de la calculadora --> 
+        <div class="contenedor-calculadora">
+
+            <!-- Inicio de contenedor de variables principales --> 
+            <div class="variables-principales">
+
+                <!-- Spans o etiquetas acompañantes de los inputs -->
+                <div class="variables-princiaples-spans">
+                    <span>Media (&lambda;):</span>
+                <!-- Fin de spans o etiquetas acompañantes de los inputs -->
+                </div>
+
+                <!-- Inputs donde se colocaran los valores -->
+                <div class="variables-principales-inputs">
+                    <div>
+                        <input id="media" type="text" autocomplete="">
+                    </div>
+                <!-- Fin de inputs donde se colocaran los valores -->
+                </div>
+                
+            <!-- Fin de contenedor de variables principales --> 
+            </div>
+    
+            <!-- Inicio del contenedor donde el usuario digita los datos acerca de la variable x -->
+            <div class="datos-variable-x">
+                
+                <!-- Inicio de formato de entrada -->
+                <div class="formato-de-entrada">
+
+                    <!-- Formato principal -->
+                    <span class="span-1">P(x&nbsp;</span><input type="text" onkeypress="focusInput(1)" onfocus="focusInput(1)"><span class="span-2">&nbsp;)</span>
+
+                    <!-- Adicionales -->
+                    <input class="adicionales display-none" type="text" onkeypress="focusInput(2)" onfocus="focusInput(2)">
+                    <span class="adicionales display-none span-3">)</span>
+                    <span id="permisor" style="display: none"></span>
+                </div>
+    
+                <!-- Inicio de contenedor de comparadores -->
+                <div class="comparadores">
+
+                    <div>
+                        <button onclick="agregarComparadores(1)">M</button>
+                    </div>
+
+                    <div>
+                        <button onclick="agregarComparadores(2)">M</button>
+                    </div>
+
+                    <div>
+                        <button onclick="agregarComparadores(3)">=</button>      
+                    </div>
+
+                    <div>
+                        <button onclick="agregarComparadores(4)">></button>      
+                    </div>
+
+                    <div>
+                        <button onclick="agregarComparadores(5)">&lt;</button>
+                    </div>
+
+                </div>
+
+                <!-- Inicio de contenedor de diferentes probabilidades -->
+                <div class="diferentes-probabilidades">
+
+                    <div>
+                        <button onclick="probabilidadCondicional()">
+                            Activar probabilidad condicional
+                          </button>
+                    </div>
+
+                    <div>
+                        <button onclick="probabilidadIntervalo()">
+                            Activar probabilidad por intervalo
+                          </button>
+                    </div>
+
+                <!-- Fin de contenedor de diferentes probabilidades -->
+                </div>
+
+            <!-- Final del contenedor donde el usuario digita los datos acerca de la variable x -->
+            </div>
+
+            <div class="boton-calcular">
+                <!-- Inicio de contenedor boton procesar -->
+                <button onclick="calculadoraExponencial()">Calcular</button>
+                <!-- Final del contenedor boton procesar -->
+            </div>
+
+            <!-- Contendor de solución -->
+            <div class="solucion">
+
+                <!-- Inicio de contenedor de solución -->
+                <div class="modelo">
+                  <span>Modelo: P(x) = </span>
+                </div>
+
+                <div class="respuesta">
+                  <span>Respuesta: P(x) = </span>
+                </div>
+
+            <!-- Final de contenedor de solución-->
+            </div>
+
+        <!-- Final del contenedor general de la calculadora --> 
+        </div>          
+
+        
+        <h2>Instrucciones</h2><br>
+        <p>
+            La presente calculadora exponencial se puede utilizar de tres diferentes formas:
+        </p><br>
+        <ol>
+            <li>Realizando una probabilidad normal.</li>
+            <li>Estableciendo una probabilidad condicional.</li>
+            <li>Ejecutando una probabilidad por intervalo.</li>
+        </ol><br>
+
+        <p>
+            <b>Nota.</b> Debido a la característica de variables continuas donde los valores exactos no son precisamente conocidos 
+            (ej: un minuto exacto siempre tendrá una variación de más o menos milisegundos), <b>no se debe emplear la calculadora para 
+            probabilidades con '='.</b>
+        </p><br>
+        <div class="ejemplos-exponencial">
+            <img src="../imgs/calculadora-modelo-exponencial-nosedebehacer.PNG">
+        </div><br><br>
+
+        <p>
+            Para la <b>probabilidad normal</b> se debe tener en cuenta la nota expuesta anteriormente. Por ello, para hacer 
+            un cálculo de probabilidad normal, se debe emplear un comparador mayor, menor, mayor-igual o menor igual y 
+            posteriormente se hace clic en el botón <i>'Calcular'</i>. 
+        </p><br><br>
+
+        <!-- Ejemplo 1 probabilidad normal -->
+        <h3>Ejemplo 1</h3><br>
+        <p>
+            Suponga que en una de las cajas de pago de la cafetería de la universidad en promedio 8 personas son atendidas 
+            durante 10 minutos (entre las 11:30 am y 12:30 pm). Para un día cualquiera de servicio de la cafetería central después 
+            de las 11:30 am en una de las cajas de pago: ¿Cuál es la probabilidad de que transcurra máximo dos minutos 
+            hasta que sea atendida una persona?
+        </p><br><br>
+
+        <h3>Solución</h3><br>
+        <div class="ejemplos-exponencial">
+            <img src="../imgs/calculadora-modelo-exponencial-ejemplo-probabilidad-normal-1.PNG">
+        </div><br><br>
+        
+        <h3>Respuesta </h3><br>
+        <p>
+            La probabilidad de que transcurra máximo dos minutos 
+            hasta que sea atendida una persona es del 79.81%.
+        </p><br><br>
+
+
+        <!-- Ejemplo 2 probabilidad normal -->
+        <h3>Ejemplo 2</h3><br>
+        <p>
+            ¿Cuál es la probabilidad de que transcurra menos de 3 minutos hasta que sea 
+            atendida una persona?
+        </p><br><br>
+        <h3>Solución</h3><br>
+        <div class="ejemplos-exponencial">
+            <img src="../imgs/calculadora-modelo-exponencial-ejemplo-probabilidad-normal-2.PNG">
+        </div><br><br>
+        
+        <h3>Respuesta </h3><br>
+        <p>
+            La probabilidad de que transcurra menos de 3 minutos hasta que sea 
+            atendida una persona es del 90.928%.
+        </p><br><br>
+
+        <p>
+            Para la <b>probabilidad condicional</b> el proceso se activa en el momento en que
+            se da clic a <i>'Activar probabilidad condicional'</i> y posteriormente se ingresan los valores con sus respectivos
+            comparadores. 
+        </p><br><br>
+
+        <!-- Ejemplo probabilidad condicional -->
+        <h3>Ejemplo</h3><br>
+        <p>
+            Se ha comprobado que el tiempo de vida de cierto tipo de marcapasos sigue una 
+            distribución exponencial con una media de 16 años. Si el marcapasos sigue funcionando correctamente 
+            5 años en un paciente, ¿cuál es la probabilidad de que haya que cambiarlo máximo en 25 años?
+        </p><br><br>
+        <h3>Solución</h3><br>
+        <div class="ejemplos-exponencial">
+            <img src="../imgs/calculadora-modelo-exponencial-ejemplo-probabilidad-condicional.PNG">
+        </div><br><br>
+        
+        <h3>Respuesta </h3><br>
+        <p>
+            Si el marcapasos sigue funcionando correctamente 
+            5 años en un paciente, la probabilidad de que haya que cambiarlo máximo en 25 años
+            es del 71.35%.
+        </p><br><br>
+
+
+        <p>
+            Para la <b>probabilidad por intervalo</b> se ejecuta de la misma manera como se estableció en la probabilidad condicional,
+            exceptuando que, a diferencia de la probabilidad condicional, los comparadores en el primer cuadro de texto serán posicionados
+            a la derecha del valor numérico y el segundo a la izquierda.
+        </p><br><br>
+
+        <!-- Ejemplo probabilidad por intervalos -->
+        <h3>Ejemplo</h3><br>
+        <p>
+            ¿Cuál es la probabilidad de que haya que cambiarlo entre 
+            5 y 25 años?
+        </p><br><br>
+        <h3>Solución</h3><br>
+        <div class="ejemplos-exponencial">
+            <img src="../imgs/calculadora-modelo-exponencial-ejemplo-probabilidad-intervalo.PNG">
+        </div><br><br>
+        
+        <h3>Respuesta </h3><br>
+        <p>
+            La probabilidad de que haya que cambiarlo entre 
+            5 y 25 años es del 52.20%.
+        </p><br><br>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h4><a href="#">UN INGENIERO NOVATO ©</a></h4><h5>
+            Este desarrollo ha sido implementado por un estudiante universitario con el objetivo de compartir los conocimientos adquiridos durante el aprendizaje de la carrera de ingeniería.
+        </h5>
+    </div>
+
+    <script src="../js/variablex.js"></script>
+    <script src="../js/comparadores.js"></script>
+    <script src="../js/probabilidad.condicional.js"></script>
+    <script src="../js/probabilidad.intervalo.js"></script>
+    <script src="../js/metodos.estadisticos.js"></script>
+    <script src="../js/calculadora.exponencial.js"></script>
+    
+</body>
+</html>

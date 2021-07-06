@@ -1,0 +1,619 @@
+.section-calculadora-modelo-hipergeometrico{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.section-calculadora-modelo-hipergeometrico h2{
+    color: black;
+    font-family: 'Noto-regular';
+    padding-top: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.section-calculadora-modelo-hipergeometrico h3{
+    color: black;
+    font-family: 'Noto-regular';
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.section-calculadora-modelo-hipergeometrico p{
+    color: black;
+    font-family: 'Nunito';
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.section-calculadora-modelo-hipergeometrico ol{
+    color: black;
+    font-family: 'Nunito';
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ejemplos-hipergeometrico{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ejemplos-hipergeometrico img{
+    width: 70%;
+}
+
+/* ---------------------------------------------------- */
+/* Calculadora */
+/* ---------------------------------------------------- */
+
+.contenedor-calculadora{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 15% 25%;
+    min-height: 30vh;
+    background-color: #08241e;
+    padding: 20px 0px;
+}
+
+.variables-principales{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.variables-princiaples-spans{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 100%;
+}
+
+.variables-princiaples-spans span{
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    color: white;
+    font-family: 'Nunito';
+    font-size: 18px;
+    width: 100%;
+}
+
+.variables-principales-inputs{
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.variables-principales-inputs div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.variables-principales-inputs div input{
+    height: 75%;
+    text-align: center;
+    font-family: "Nunito";
+    background-color: #0f4237;
+    color: white;
+}
+
+
+.datos-variable-x{
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.datos-variable-x div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos-variable-x > div > input{
+    height: 50%;
+    text-align: center;
+    color: white;
+    font-family: "Nunito";
+    background-color: #0f4237;
+}
+
+.datos-variable-x div > span{
+    font-family: "Nunito";
+    color: white;
+}
+
+.comparadores{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.comparadores  div{
+    width: 100%;
+}
+
+.comparadores button{
+    font-family: "Nunito";
+    color: white;
+    background-color: #0f4237;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.comparadores button:hover, .activar-condicional button:hover, .diferentes-probabilidades button:hover, .boton-calcular button:hover{
+    cursor: pointer; 
+}
+    
+.comparadores button:active, .activar-condicional button:active, .diferentes-probabilidades button:active, .boton-calcular button:active{
+    background-color: #08241e; 
+}
+
+.diferentes-probabilidades{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.diferentes-probabilidades div{
+    width: 100%;
+}
+
+.diferentes-probabilidades button{
+    color: white;
+    font-family: 'Nunito';
+    background-color: #0f4237;
+    width: 90%;
+    padding: 10px;
+}
+
+.display-none{
+    display: none;
+}
+
+.boton-calcular{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.boton-calcular button{
+    padding: 30px;
+    background-color: #0f4237;;
+    font-family: 'Nunito';
+    font-size: 20px;
+    color: white;
+}
+
+.solucion{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.solucion div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solucion div{
+    color: white;
+    font-family: 'Nunito';
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: white;
+    box-shadow: 0 0 0px 1000px #0f4237 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.ejemplos-hipergeometrico{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ejemplos-hipergeometrico img{
+    width: 70%;
+}
+
+/* ---------------------------------------------------- */
+/* Fin Calculadora */
+/* ---------------------------------------------------- */
+
+@media (max-width: 1265px){
+    .variables-princiaples-spans span{
+        font-size: 16px;
+    }
+
+    .formato-de-entrada input{
+        width: 30%;
+    }
+
+    .diferentes-probabilidades button, .formato-de-entrada span, .comparadores button{
+        font-size: 14px;
+    }
+
+    .boton-calcular button{
+        font-size: 18px;
+    }    
+}
+
+@media (max-width: 1214px){
+    .variables-principales {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .variables-principales-inputs{
+        justify-content: flex-start;
+    }
+
+    .variables-princiaples-spans span{
+        font-size: 16px;
+    }
+
+    .formato-de-entrada input{
+        width: 30%;
+    }
+
+    .diferentes-probabilidades button, .formato-de-entrada span, .comparadores button{
+        font-size: 12px;
+    }
+
+    .boton-calcular button{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 1145px){
+    .variables-principales {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .variables-principales-inputs{
+        justify-content: flex-start;
+    }
+
+    .variables-princiaples-spans span{
+        font-size: 19px;
+        width: 100%;
+    }
+
+    .variables-principales-inputs input, .formato-de-entrada input{
+        width: 90%;
+    }
+
+    .boton-calcular button{
+        font-size: 18px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .formato-de-entrada span{
+        font-size: 18px;
+    }
+
+    .datos-variable-x > div > input{
+        height: 18px;
+        width: 60px;
+    }
+
+    .formato-de-entrada, .comparadores, .diferentes-probabilidades{
+        padding-bottom: 14px;
+    }
+
+    .diferentes-probabilidades button{
+        font-size: 16px;
+        padding: 5px;
+    }    
+}
+
+@media (max-width: 1045px){
+    .variables-principales {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .variables-princiaples-spans span{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .variables-principales-inputs div{        
+        justify-content: flex-start;
+    }
+
+    .variables-principales-inputs input, .formato-de-entrada input{
+        width: 80%;
+    }
+
+    .boton-calcular button{
+        font-size: 17px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .formato-de-entrada span{
+        font-size: 17px;
+    }
+
+    .datos-variable-x > div > input{
+        height: 15px;
+        width: 60px;
+    }
+
+    .formato-de-entrada, .comparadores, .diferentes-probabilidades{
+        padding-bottom: 13px;
+    }
+
+    .diferentes-probabilidades button{
+        font-size: 14px;
+        padding: 5px;
+    }
+
+}
+
+@media (max-width: 945px){
+    .variables-principales {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .variables-princiaples-spans span{
+        font-size: 17px;
+        width: 100%;
+    }
+
+    .variables-principales-inputs div{        
+        justify-content: flex-start;
+    }
+
+    .variables-principales-inputs input, .formato-de-entrada input{
+        width: 80%;
+    }
+
+    .boton-calcular button{
+        font-size: 16px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .formato-de-entrada span{
+        font-size: 16px;
+    }
+
+    .datos-variable-x > div > input{
+        height: 15px;
+        width: 60px;
+    }
+
+    .formato-de-entrada, .comparadores, .diferentes-probabilidades{
+        padding-bottom: 12px;
+    }
+
+    .diferentes-probabilidades button{
+        font-size: 13px;
+        padding: 5px;
+    }
+
+}
+
+@media (max-width: 845px){
+    .variables-principales {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .variables-princiaples-spans span{
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .variables-principales-inputs div{        
+        justify-content: flex-start;
+    }
+
+    .variables-principales-inputs input, .formato-de-entrada input{
+        width: 80%;
+    }
+
+    .boton-calcular button{
+        font-size: 16px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .formato-de-entrada span{
+        font-size: 14px;
+    }
+
+    .datos-variable-x > div > input{
+        height: 15px;
+        width: 60px;
+    }
+
+    .formato-de-entrada, .comparadores, .diferentes-probabilidades{
+        padding-bottom: 10px;
+    }
+
+    .diferentes-probabilidades button{
+        font-size: 12px;
+        padding: 5px;
+    }
+
+}
+
+@media (max-width: 800px){
+    .variables-principales {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .variables-princiaples-spans span{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .variables-principales-inputs div{        
+        justify-content: flex-start;
+    }
+
+    .variables-principales-inputs input, .formato-de-entrada input{
+        width: 80%;
+    }
+
+    .boton-calcular button{
+        font-size: 14px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .formato-de-entrada span{
+        font-size: 12px;
+    }
+
+    .datos-variable-x > div > input{
+        height: 15px;
+        width: 60px;
+    }
+
+    .formato-de-entrada, .comparadores, .diferentes-probabilidades{
+        padding-bottom: 10px;
+    }
+
+    .diferentes-probabilidades button{
+        font-size: 10px;
+        padding: 5px;
+    }
+
+
+}
+
+@media (max-width: 760px){
+    .variables-principales {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .variables-princiaples-spans span{
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .variables-principales-inputs div{        
+        justify-content: flex-start;
+    }
+
+    .variables-principales-inputs input, .formato-de-entrada input{
+        width: 80%;
+    }
+
+    .boton-calcular button{
+        font-size: 12px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .formato-de-entrada span{
+        font-size: 10px;
+    }
+
+    .datos-variable-x > div > input{
+        height: 15px;
+        width: 60px;
+    }
+
+    .formato-de-entrada, .comparadores, .diferentes-probabilidades{
+        padding-bottom: 10px;
+    }
+
+    .diferentes-probabilidades button{
+        font-size: 8px;
+        padding: 5px;
+    }
+
+    
+}
+
+@media (max-width: 701px){
+    .contenedor-calculadora{
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+
+    .variables-princiaples-spans span {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .variables-principales{
+        padding: 20px 0px;
+    }
+
+    .variables-principales-inputs input{
+        margin-bottom: 20px;
+    }
+
+    .datos-variable-x > div > input{
+        height: 20px;
+        width: 90px;
+    }
+
+    .formato-de-entrada span {
+        font-size: 16px;
+    }
+
+    .formato-de-entrada, .comparadores, .diferentes-probabilidades, .boton-calcular{
+        padding-bottom: 15px;
+    }
+
+    .diferentes-probabilidades button {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .boton-calcular button {
+        font-size: 17px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .solucion{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+}
+
+@media (max-width: 281px){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

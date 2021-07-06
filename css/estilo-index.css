@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Noto-light';
+    src: url('fonts/NotoLight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/NotoLight.otf'),
+         url('fonts/NotoLight.svg') format('svg'),
+         url('fonts/NotoLight.ttf') format('truetype'),
+         url('fonts/NotoLight.woff') format('woff'),
+         url('fonts/NotoLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+@font-face {
+    font-family: 'Noto-regular';
+    src: url('fonts/NotoRegular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/NotoRegular.otf'),
+         url('fonts/NotoRegular.svg') format('svg'),
+         url('fonts/NotoRegular.ttf') format('truetype'),
+         url('fonts/NotoRegular.woff') format('woff'),
+         url('fonts/NotoRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto-thin';
+    src: url('fonts/NotoThin.eot?#iefix') format('embedded-opentype'),
+         url('fonts/NotoThin.otf'),
+         url('fonts/NotoThin.svg') format('svg'),
+         url('fonts/NotoThin.ttf') format('truetype'),
+         url('fonts/NotoThin.woff') format('woff'),
+         url('fonts/NotoThin.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('fonts/Nunito.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Nunito.svg') format('svg'),
+         url('fonts/Nunito.ttf') format('truetype'),
+         url('fonts/Nunito.woff') format('woff'),
+         url('fonts/Nunito.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 1;
+}
+
+.nav h1{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto-regular';
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    width: 25%;
+    height: 100%;
+    background-color: #25A086;
+}
+
+.nav h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav ul{
+    display: inline-flex;
+    width: 75%;
+    background: white;
+    list-style-type: none;
+    height: 100%;
+    align-content: flex-end;    
+    justify-content: flex-end;
+    transition: transform 0.75s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.nav ul li{
+    height: 100%;
+    display: flex;
+    justify-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color:  #196756;
+    color: white;
+    font-family: 'Noto-light';
+    text-align: center;
+}
+
+.nav ul li a{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.nav ul li:hover{
+    background-color: #25A086;
+    cursor: pointer;
+}
+
+.nav button{
+    width: 20%;
+    color: white;
+    background-color: #196756;
+    display: none;
+}
+
+.nav button i{
+    font-size: 16px;
+}
+
+.nav button:hover{
+    cursor: pointer;
+}
+
+.section{
+    width: 100%;
+    background-color: white;
+}
+
+.section h2{
+    color: black;
+    font-family: 'Noto-regular';
+    padding-top: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.section p{
+    color: black;
+    font-family: 'Nunito';
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Footer de Index */
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 155px;
+    background-color: #25A086;
+    color: white;
+}
+
+.footer h4{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    font-family: 'Noto-thin';
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 30%;
+    height: 100%;
+}
+
+.footer h5{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    font-family: 'Noto-thin';
+    font-size: 16px;
+    width: 70%;
+    height: 100%;
+}
+
+.footer h4 a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Media de 1057px para acomodar el Footer (h4 y h5) */
+@media (max-width: 1057px){
+    .footer h4{
+        font-size: 16px;
+    }
+
+    .footer h5{
+        font-size: 14px;
+    }
+}
+
+/* Media de 1038 px generalmente para el nav (El nav ha sido animado hacia la derecha e izquierda)  */
+@media (max-width: 1038px){
+    .nav h1{
+        display: inline-flex;
+        width: 80%;
+    }
+
+    .nav button{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 20%;
+    }
+
+    .nav ul{
+        display: block;
+        position: absolute;
+        top: 100%;
+        width: 100%;    
+    }
+
+    .transform-100{
+        transform: translateX(100%);
+    }
+
+    .overflow-hidden{
+        overflow: hidden;
+    }
+
+    .nav ul li{
+        height: 70%;
+    }
+
+}
+
+/* Media de 926px para seguir acomodandeo el Footer (h4 y h5) */
+@media (max-width: 926px){
+    .footer h4{
+        font-size: 14px;
+        width: 35%;
+    }
+
+    .footer h5{
+        font-size: 12px;
+        width: 65%;
+    }
+}
+
+/* Media de 600px para seguir acomodandeo el Footer (h4 y h5) */
+@media (max-width: 600px){
+    .footer h4{
+        font-size: 14px;
+        width: 45%;
+    }
+
+    .footer h5{
+        font-size: 10px;
+        width: 55%;
+    }
+}
+
+/* Media de 415px para seguir acomodandeo el Footer (h4 y h5) --> iPhone 6/7/8 Plus */
+@media (max-width: 415px){
+    .footer h4{
+        font-size: 14px;
+        width: 50%;
+    }
+
+    .footer h5{
+        text-align: center;
+        font-size: 11px;
+        width: 50%;
+    }
+}
+
+/* Media de 412px para seguir acomodandeo el Footer (h4 y h5) --> Pixel 2 XL */
+@media (max-width: 412px){
+    .footer h4{
+        font-size: 14px;
+        width: 50%;
+    }
+
+    .footer h5{
+        text-align: center;
+        font-size: 10px;
+        width: 50%;
+    }
+}
+
+/* Media de 376px para seguir acomodandeo el Footer (.nav h1, h4 y h5) --> iPhone 6/7/8 */
+@media (max-width: 376px){
+    .footer h4{
+        font-size: 14px;
+        text-align: center;
+        width: 50%;
+    }
+
+    .footer h5{
+        text-align: center;
+        font-size: 10px;
+        width: 50%;
+    }
+}
+
+/* Media de 321px para seguir acomodandeo el Footer (.nav h1, h4 y h5) --> iPhone 5/SE */
+@media (max-width: 321px){
+    .nav h1{
+        font-size: 16px;
+    }
+
+    .footer h4{
+        font-size: 14px;
+        text-align: center;
+        width: 40%;
+    }
+
+    .footer h5{
+        text-align: center;
+        font-size: 10px;
+        width: 60%;
+    }
+}
+
+/* Media de 281x para seguir acomodandeo el Footer (.nav h1, h4 y h5) */
+@media (max-width: 281px){
+    .nav h1{
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .footer h4{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .footer h5{
+        text-align: center;
+        font-size: 8px;
+    }
+
+}
