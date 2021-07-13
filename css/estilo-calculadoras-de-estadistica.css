@@ -1,10 +1,12 @@
 .section-calculadoras-de-estadistica{
     width: 100%;
-    height: 80vh;
+    height: auto;
+    margin-bottom: 1em;
     background-color: white;
 }
 
 .section-calculadoras-de-estadistica h2{
+    text-align: center;
     color: black;
     font-family: 'Noto-regular';
     padding-top: 40px;
@@ -13,7 +15,7 @@
     justify-content: center;
 }
 
-.section-calculadoras-de-estadistica p{
+.section-calculadoras-de-estadistica p{    
     color: black;
     font-family: 'Nunito';
     text-align: justify;
@@ -34,6 +36,7 @@
 }
 
 .grid a{
+    text-align: center;
     text-decoration: none;
     color: white;
     display: flex;
