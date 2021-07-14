@@ -20,7 +20,7 @@
     font-family: 'Noto-regular';
     font-size: 25px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -43,15 +43,14 @@
 }
 
 .ejemplos-binomial{
-    padding-left: 30px;
-    padding-right: 30px;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .ejemplos-binomial img{
-    width: 70%;
+    min-width: 436px;
 }
 
 /* ---------------------------------------------------- */
@@ -564,6 +563,7 @@ input:-webkit-autofill{
     .solucion span{
         font-size: 13px;
     }
+
 }
 
 @media (max-width: 701px){
@@ -613,7 +613,7 @@ input:-webkit-autofill{
     .solucion{
         display: grid;
         grid-template-columns: auto auto;
-    }
+    }    
 }
 
 @media (max-width: 281px){
