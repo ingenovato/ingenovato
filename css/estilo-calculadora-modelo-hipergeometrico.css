@@ -21,9 +21,7 @@
     font-family: 'Noto-regular';
     font-size: 25px;
     display: flex;
-    justify-content: flex-start;
-    padding-left: 30px;
-    padding-right: 30px;
+    justify-content: center;
 }
 
 .section-calculadora-modelo-hipergeometrico p{
@@ -45,15 +43,11 @@
 }
 
 .ejemplos-hipergeometrico{
-    padding-left: 30px;
-    padding-right: 30px;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-}
-
-.ejemplos-hipergeometrico img{
-    width: 70%;
+    justify-content: center;
+    overflow: hidden;
+    height: auto;
 }
 
 /* ---------------------------------------------------- */
@@ -217,18 +211,6 @@ input:-webkit-autofill{
     -webkit-text-fill-color: white;
     box-shadow: 0 0 0px 1000px #0f4237 inset;
     transition: background-color 5000s ease-in-out 0s;
-}
-
-.ejemplos-hipergeometrico{
-    padding-left: 30px;
-    padding-right: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.ejemplos-hipergeometrico img{
-    width: 70%;
 }
 
 /* ---------------------------------------------------- */
