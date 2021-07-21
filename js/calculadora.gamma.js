@@ -153,22 +153,13 @@ function calcularProbabilidadNormal(media, alfa, x){
 
 /* Agrandar la imagen */
 function agrandarImagen(){
-  let contenedor = document.getElementsByClassName('gamma-incompleta')[0];
-  let iconoCerrar = document.getElementsByClassName('fa-times')[0];
-  contenedor.classList.add('imagen-grande');
-  iconoCerrar.classList.remove('no-visible');
-  let body = document.getElementsByTagName('body')[0];
-  body.style.overflowY = 'hidden';
-  window.scroll(0,0);
+  let contenedor = document.getElementsByClassName('imagen-grande')[0];
+  contenedor.classList.remove('no-display');
 }
 
 /* Cerrar la pestaña de agrandar imagen */
 function cerrarAgrandar(){
-  let contenedor = document.getElementsByClassName('gamma-incompleta')[0];
-  let iconoCerrar = document.getElementsByClassName('fa-times')[0];
-  contenedor.classList.remove('imagen-grande');
-  iconoCerrar.classList.add('no-visible');
-  let body = document.getElementsByTagName('body')[0];
-  body.style.overflowY = 'visible';
+  let contenedor = document.getElementsByClassName('imagen-grande')[0];
+  contenedor.classList.add('no-display');
 }
 

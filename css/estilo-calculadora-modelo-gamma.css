@@ -60,21 +60,21 @@
     cursor: pointer;
 }
 
-.gamma-incompleta i{
-    font-size: 1.5rem;
-}
-
 .imagen-grande{
-    position: absolute;
+    display: none;
+    position: fixed;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
     background-color: rgb(0,0,0,0.8);
-    z-index: 1;
-    height: 100%;    
 }
 
 .imagen-grande img{
     width: 50%;
-    justify-self: center;
 }
 
 .imagen-grande i{
@@ -82,18 +82,15 @@
     top: 2rem;
     right: 2.5rem;
     color: white;
+    font-size: 1.5rem;
 }
 
 .imagen-grande i:hover{
     cursor: pointer;
 }
 
-.no-visible{
-    visibility: hidden;
-}
-
-.visible{
-    visibility: visible;
+.no-display{
+    display: none;
 }
 
 /* ------------------------------- */

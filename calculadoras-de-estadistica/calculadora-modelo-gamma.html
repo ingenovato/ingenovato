@@ -25,6 +25,13 @@
     <title>Calculadora modelo gamma | Un Ingeniero Novato</title>
 </head>
 <body onload="agregarComparadoresKatex()">
+
+    <!-- Tabla de la Gamma Incompleta aumentada -->
+    <div class="imagen-grande no-display">
+        <img loading="lazy" src="../imgs/gamma-incompleta.png">
+        <i class="fa fa-times" onclick="cerrarAgrandar()"></i>
+    </div>
+
     <!-- Nav -->
     <div class="nav overflow-hidden">
         <h1><a href="../index.html">UN INGENIERO NOVATO</a></h1><button class="boton-responsive" onclick="toggleBoton()">
@@ -56,7 +63,6 @@
 
         <div class="gamma-incompleta">
             <img loading="lazy" src="../imgs/gamma-incompleta.png" onclick="agrandarImagen()">
-            <i class="fa fa-times no-visible" onclick="cerrarAgrandar()"></i>
         </div><br>
 
         <p>
